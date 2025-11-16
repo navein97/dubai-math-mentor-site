@@ -66,15 +66,15 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-secondary" />
-                <a href="tel:+971501234567" className="hover:text-secondary transition-colors">
-                  +971 50 123 4567
+                <a href="tel:+971588042260" className="hover:text-secondary transition-colors">
+                  +971588042260
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-secondary" />
-                <a href="mailto:tutor@jltmath.com" className="hover:text-secondary transition-colors">
+                <span className="text-primary-foreground/80">
                   tutor@jltmath.com
-                </a>
+                </span>
               </li>
             </ul>
           </div>

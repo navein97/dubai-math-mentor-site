@@ -33,11 +33,9 @@ const Contact = () => {
       return;
     }
 
-    // In a real application, you would send this to a backend
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your inquiry. I'll get back to you within 24 hours.",
-    });
+    // Open WhatsApp with pre-filled message
+    const whatsappMessage = `Hello! I'm ${formData.name}.%0A%0AEmail: ${formData.email}${formData.phone ? `%0APhone: ${formData.phone}` : ''}${formData.curriculum ? `%0ACurriculum: ${formData.curriculum}` : ''}%0A%0AMessage: ${formData.message}`;
+    window.open(`https://wa.me/971588042260?text=${whatsappMessage}`, '_blank');
 
     // Reset form
     setFormData({
@@ -58,14 +56,13 @@ const Contact = () => {
     {
       icon: <Phone className="h-6 w-6 text-secondary" />,
       title: "Phone",
-      detail: "+971 50 123 4567",
-      link: "tel:+971501234567",
+      detail: "+971588042260",
+      link: "tel:+971588042260",
     },
     {
       icon: <Mail className="h-6 w-6 text-secondary" />,
       title: "Email",
       detail: "tutor@jltmath.com",
-      link: "mailto:tutor@jltmath.com",
     },
     {
       icon: <Clock className="h-6 w-6 text-secondary" />,
